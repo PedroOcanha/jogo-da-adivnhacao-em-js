@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da advinhação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <audio id="bg-music" preload="auto" autoplay loop muted>
+        <source src="Midia/chapter2.mp3" type="audio/mp3">
+    </audio>
+    
+    <style>
+        body{
+            background-image: url(city.jpg);
+        }
+    </style>
+
+    <div class="container">
+        <div class="container__conteudo">
+            <div><img src="trophy.png" alt="trophy" height="150" width="150"></div> 
+            <div class="container__informacoes">
+
+                 <div class="container__texto">
+                   <h1 style="color: white; text-align: center; font-size: 1000;" >Você Acertou!</h1>
+                   <h2 style="color: white; text-align: center; font-size: 1000;">Você Descobriu o Número Secreto :D</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" defer></script>
+
+    <script>
+      // pega o elemento de áudio
+      const music = document.getElementById("bg-music");
+
+      // na primeira interação do usuário (clique ou tecla), ativa o som
+      function enableSound() {
+        music.muted = false;
+        music.play();
+        document.removeEventListener("click", enableSound);
+        document.removeEventListener("keydown", enableSound);
+      }
+
+      document.addEventListener("click", enableSound);
+      document.addEventListener("keydown", enableSound);
+    </script>
+  
+</body>
+</html>
+
+   
