@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(#ff0000 0%, #a90404 33.33%, #600101 66.67%, #3a0000 100%);
+    background-image: url("img/Cyber_Field_location.webp");
     height: 100vh;
     display: flex;
     align-items: center;
